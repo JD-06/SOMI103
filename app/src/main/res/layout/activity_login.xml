@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    tools:context=".login">
+    <ImageView
+        android:elevation="16dp"
+        android:layout_margin="64dp"
+        android:src="?attr/iconbro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cvlogin"/>
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/cvlogin"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        app:cardElevation="16dp"
+        app:cardBackgroundColor="?attr/backgroundCardColor"
+        app:cardCornerRadius="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:fontFamily="@font/leixo"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="@string/str_text"
+            android:textColor="?attr/primaryTextColor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/btnlogin"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="@string/str_btnins"
+            android:textColor="?attr/secondaryTextColor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/btnsingin"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="@string/str_btnreg"
+                android:textColor="?attr/secondaryTextColor"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

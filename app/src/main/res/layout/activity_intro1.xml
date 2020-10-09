@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    tools:context=".intro1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:gravity="center"
+        android:id="@+id/txtprincipal"
+        android:fontFamily="@font/leixo"
+        android:textStyle="bold"
+        android:text="@string/str_text"
+        android:textColor="?attr/primaryTextColor"
+        android:layout_margin="16dp"
+        android:textSize="26dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ltprincipal"
+        android:layout_margin="16dp"
+        android:layout_above="@+id/btnprincipal"
+        android:layout_below="@+id/txtprincipal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnprincipal"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardElevation="16dp"
+        app:cardBackgroundColor="?attr/backgroundCardColor"
+        app:cardCornerRadius="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="@string/str_sig"
+            android:textColor="?attr/secondaryTextColor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</LinearLayout>

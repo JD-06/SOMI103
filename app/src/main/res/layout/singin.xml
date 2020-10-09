@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/backgroundColor"
+    app:cardCornerRadius="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_margin="16dp"
+            android:id="@+id/etname"
+            android:textColorHint="?attr/secondaryTextColor"
+            android:hint="@string/str_name"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:id="@+id/etemailreg"
+            android:layout_below="@+id/etname"
+            android:textColorHint="?attr/secondaryTextColor"
+            android:hint="@string/str_email"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:id="@+id/etpasswordreg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etemailreg"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/str_pass"
+            android:inputType="textPassword"
+            android:textColor="?attr/primaryTextColor"
+            android:textColorHint="?attr/secondaryTextColor"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etpasswordregconfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etpasswordreg"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/str_passconfirm"
+            android:inputType="textPassword"
+            android:textColor="?attr/primaryTextColor"
+            android:textColorHint="?attr/secondaryTextColor"
+            android:textSize="16sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@+id/etpasswordregconfirm"
+            android:id="@+id/btnreg"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardElevation="16dp"
+            app:cardBackgroundColor="?attr/backgroundCardColor"
+            app:cardCornerRadius="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true">
+            <TextView
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="@string/str_btnreg"
+                android:textColor="?attr/secondaryTextColor"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@+id/btnreg"
+            android:id="@+id/divider2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="?attr/dividerColor"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:orientation="horizontal" />
+            <TextView
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="@string/str_or"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="?attr/dividerColor"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_below="@+id/divider2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:id="@+id/btnreggoogle"
+                android:layout_gravity="center"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardElevation="16dp"
+                app:cardBackgroundColor="?attr/backgroundCardColor"
+                app:cardCornerRadius="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true">
+                <ImageView
+                    android:padding="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/googleg_standard_color_18"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+ <androidx.cardview.widget.CardView
+     android:foreground="?android:attr/selectableItemBackground"
+     app:cardBackgroundColor="?attr/backgroundCardColor"
+     android:clickable="true"
+     app:cardCornerRadius="100dp"
+     android:id="@+id/bubbleasis"
+     android:layout_width="75dp"
+     android:layout_height="75dp"
+     android:focusable="true" >
+     <ImageView
+         android:layout_gravity="center"
+         android:src="?attr/iconbro"
+         android:layout_width="50dp"
+         android:layout_height="50dp"/>
+
+
+ </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

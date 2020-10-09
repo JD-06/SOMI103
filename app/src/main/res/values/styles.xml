@@ -1,0 +1,42 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#0076c2</item>
+        <item name="colorPrimaryDark">#0659a7</item>
+        <item name="colorAccent">#009BC2</item>
+        <item name="primaryTextColor">#121212</item>
+        <item name="secondaryTextColor">#99121212</item>
+        <item name="backgroundCardColor">#fff</item>
+        <item name="dividerColor">#29121212</item>
+        <item name="backgroundColor">#f0f2f5</item>
+        <item name="Color1">#0076c2</item>
+        <item name="Color2">#0659a7</item>
+        <item name="barcolor">#FFFFFF</item>
+        <item name="unscolor">#9f9f9f</item>
+        <item name="threeTextColor">#DBFFFFFF</item>
+        <item name="rpcolor">#290659A7</item>
+        <item name="iconbro">@drawable/somin</item>
+
+
+    </style>
+    <!-- Base application theme. -->
+    <style name="darkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#000</item>
+        <item name="colorPrimaryDark">#000</item>
+        <item name="colorAccent">#00f8fc</item>
+        <item name="primaryTextColor">#DBFFFFFF</item>
+        <item name="secondaryTextColor">#99FFFFFF</item>
+        <item name="backgroundCardColor">#28292e</item>
+        <item name="dividerColor">#F2F2F3</item>
+        <item name="backgroundColor">#121212</item>
+        <item name="Color1">#00f8fc</item>
+        <item name="Color2">#0091fe</item>
+        <item name="barcolor">#2e2e2e</item>
+        <item name="unscolor">#9f9f9f</item>
+        <item name="threeTextColor">#121212</item>
+        <item name="rpcolor">#29FFFFFF</item>
+        <item name="iconbro">@drawable/somic</item>
+
+    </style>
+
+</resources>

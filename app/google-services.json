@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "401196381483",
+    "firebase_url": "https://somi-xvpfhm.firebaseio.com",
+    "project_id": "somi-xvpfhm",
+    "storage_bucket": "somi-xvpfhm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401196381483:android:80dbe906e70e7c4f8e416e",
+        "android_client_info": {
+          "package_name": "com.somi.cheems"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401196381483-6no3obeivlba6bjrdrj45s8ghbnmiic4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.somi.cheems",
+            "certificate_hash": "2963da1383d3733c3ff83b82e92445b3069f2394"
+          }
+        },
+        {
+          "client_id": "401196381483-p23iecplog2aa7dn7ur5tuenbfpln37l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCktbwNSzpqP7QH56aqcWf8EFC8aFFxDa0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401196381483-f8kc0pfp9m0dll97mfhqbaq5v0vvhqtu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

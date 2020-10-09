@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_asis"
+        android:icon="@drawable/ic_voice_asis"
+        android:title="@string/str_asis" />
+
+    <item
+        android:id="@+id/nav_menu"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/str_menu" />
+
+    <item
+        android:id="@+id/nav_guia"
+        android:icon="@drawable/ic_guia"
+        android:title="@string/str_guia" />
+
+
+    <item
+        android:id="@+id/nav_conf"
+        android:icon="@drawable/ic_conf"
+        android:title="@string/str_conf" />
+
+</menu>

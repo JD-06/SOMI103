@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">SOMI</string>
+    <string name="str_text">Welcome to sOmi</string>
+    <string name="str_buttonacp">OK</string>
+    <string name="str_btnreg">Sing in</string>
+    <string name="str_btnins">Log in</string>
+    <string name="str_guia">Pilot</string>
+    <string name="str_asis">Assistant</string>
+    <string name="str_menu">Menu</string>
+    <string name="str_conf">Configuration</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="str_mode">Mode</string>
+    <string name="str_identif">Identificator</string>
+    <string name="str_recuerdos">Memories</string>
+    <string name="str_ia">Artificial intelligence</string>
+    <string name="str_fav">Favorites</string>
+    <string name="str_juego">Games</string>
+    <string name="str_emparejamiento">System pairing</string>
+    <string name="str_ubi">Ubication</string>
+    <string name="str_tiempo">Time</string>
+    <string name="str_noti">Notifications</string>
+    <string name="str_lib">Libraries</string>
+    <string name="str_apoyar">Support us</string>
+    <string name="str_somiapoyar">SOMI is a project to help blind people created by CBTIS 103 students, learn how you can support the development and support of the project.</string>
+    <string name="str_karen">en</string>
+    <string name="str_encontrar">I find this on the browser</string>
+    <string name="str_sig">Next</string>
+    <string name="str_intro1">Hi! , my name is Karen, I will be your virtual assistant, you can ask me things like your current location, describe things to you from somewhere, information about things through my search engine, in addition to controlling the SOMI system, and more things that we will discover</string>
+    <string name="str_intro2">Very well, let\'s start, accept all the corresponding permissions, these will help me access the location, camera and microphone.</string>
+    <string name="str_terms">Terms and Conditions</string>
+    <string name="str_termscheck">I accept the terms and conditions</string>
+    <string name="str_email">Email</string>
+    <string name="str_pass">Password</string>
+    <string name="str_or">Or</string>
+    <string name="str_checkdata">Check the data</string>
+    <string name="str_name">Name</string>
+    <string name="str_passconfirm">Confirm password</string>
+    <string name="str_errordb">There was an error in the database</string>
+    <string name="str_errorcaracteres">The password must be more than 6 characters</string>
+    <string name="str_errordatos">You must enter valid data</string>
+    <string name="str_errorpass">Passwords don\'t match</string>
+    <string name="str_errorreg">An error has occurred in the registry</string>
+    <string name="ttskey" translatable="false">0ZV8bnS6khgSaS9WFnf8JKQNc26z9u1qrvnxVJhgD1is</string>
+    <string name="ttsurl" translatable="false">https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/f07368f2-cc2a-4cee-b23e-2de29bdab81f</string>
+    <string name="sttkey" translatable="false">TRnA1e9QxiLHDImTMNU1Gz2zIEUUX3_qIbp_R6jSef7_</string>
+    <string name="karenkey" translatable="false">cQVHNhRSdJoRVM7__Ek4mZe2L5qikIOSJ0Pqt34Syqe8</string>
+    <string name="karenurl" translatable="false">https://api.us-south.assistant.watson.cloud.ibm.com/instances/17adcb67-6b85-44ac-b4d0-1488023559c0</string>
+    <string name="stturl" translatable="false">https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/34d47c79-c8b0-479b-a2ee-cb45560f64d7</string>
+    <string name="assistant_id" translatable="false">ab7450f8-df85-4919-9e4d-36eeff8a2e05</string>
+    <string name="str_karenerror">An error has occurred, please try again.</string>
+    <string name="str_karenlenguaje">en-US</string>
+    <string name="title_activity_maps" translatable="false">Map</string>
+    <string name="str_backserv">Real-time location service</string>
+    <string name="str_direccion">Our current location is:</string>
+    <string name="str_hora">"It's, "</string>
+    <string name="api_key" translatable="false">xyb2FqlvZ2v_TVGjZ2k9nEvrhRIxKY3gpZfVuCXrng4W</string>
+    <string name="str_duckduckidioma">en_US</string>
+    <string name="str_dialogprocess">Processing</string>
+    <string name="str_encontre">I found this</string>
+    <string name="str_textofound">with this text</string>
+    <string name="facebook_app_id" translatable="false">1249156635476341</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1249156635476341</string>
+    <string name="user_exists" translatable="false">An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.</string>
+
+</resources>
