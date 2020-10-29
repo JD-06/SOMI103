@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SOMI</string>
-    <string name="str_text">Bienvenido a sOmi</string>
+    <string name="app_name">IXAYA</string>
+    <string name="str_text">Bienvenido a IXAYA</string>
     <string name="str_buttonacp">Confirmar</string>
     <string name="str_btnreg">Registrarse</string>
     <string name="str_btnins">" Iniciar sesión"</string>

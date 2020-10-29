@@ -13,6 +13,7 @@
         <attr name="threeTextColor" format="color"/>
         <attr name="rpcolor" format="color"/>
         <attr name="iconbro" format="integer" />
+        <attr name="iconmic" format="integer" />
 
     </declare-styleable>
 </resources>

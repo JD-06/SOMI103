@@ -16,6 +16,7 @@
         <item name="threeTextColor">#DBFFFFFF</item>
         <item name="rpcolor">#290659A7</item>
         <item name="iconbro">@drawable/somin</item>
+        <item name="iconmic">@drawable/ic_baseline_mic_24</item>
 
 
     </style>
@@ -36,7 +37,7 @@
         <item name="threeTextColor">#121212</item>
         <item name="rpcolor">#29FFFFFF</item>
         <item name="iconbro">@drawable/somic</item>
-
+        <item name="iconmic">@drawable/ic_baseline_mic_2</item>
     </style>
 
 </resources>

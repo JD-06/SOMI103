@@ -77,22 +77,22 @@ public class IdentificadorImagenes extends AppCompatActivity {
     private String key = "dark";
 
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
 
     }
 
     @Override
-    protected void onStop(){
+    protected void onStop() {
         super.onStop();
 
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if(DataSave.restorePrefData(key,getApplicationContext())){
+        if (DataSave.restorePrefData(key, getApplicationContext())) {
             setTheme(R.style.darkTheme);
-        }
-        else {
+        } else {
             setTheme(R.style.AppTheme);
         }
         super.onCreate(savedInstanceState);
@@ -105,18 +105,19 @@ public class IdentificadorImagenes extends AppCompatActivity {
         btncapturar = findViewById(R.id.btncapturar);
         mPreviewView = findViewById(R.id.view_finder);
 
-        if(allPermissionsGranted()){
+        if (allPermissionsGranted()) {
             startCamera(); //start camera if permission has been granted by user
             IamOptions options = new IamOptions.Builder()
                     .apiKey(getString(R.string.api_key))
                     .build();
-            vrClient = new VisualRecognition("2018-07-01",options);
-        } else{
+            vrClient = new VisualRecognition("2018-07-01", options);
+        } else {
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS);
         }
 
 
     }
+
     private void startCamera() {
 
         final ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(this);
@@ -161,21 +162,20 @@ public class IdentificadorImagenes extends AppCompatActivity {
         }
 
         final ImageCapture imageCapture = builder
-                .setTargetResolution(new Size(1080,1920))
+                .setTargetResolution(new Size(1080, 1920))
                 .setTargetRotation(this.getWindowManager().getDefaultDisplay().getRotation())
                 .build();
-        preview.setSurfaceProvider(mPreviewView.createSurfaceProvider());
-        Camera camera = cameraProvider.bindToLifecycle((LifecycleOwner)this, cameraSelector, preview, imageAnalysis, imageCapture);
-
+        preview.setSurfaceProvider(mPreviewView.getSurfaceProvider());
+        Camera camera = cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview, imageAnalysis, imageCapture);
 
 
         btncapturar.setOnClickListener(v -> {
 
             waitingDialog.show();
             SimpleDateFormat mDateFormat = new SimpleDateFormat("yyyyMMddHHmmss", Locale.US);
-            File file = new File(getBatchDirectoryName(), mDateFormat.format(new Date())+ ".jpg");
+            File file = new File(getBatchDirectoryName(), mDateFormat.format(new Date()) + ".jpg");
             ImageCapture.OutputFileOptions outputFileOptions = new ImageCapture.OutputFileOptions.Builder(file).build();
-            imageCapture.takePicture(outputFileOptions, executor, new ImageCapture.OnImageSavedCallback () {
+            imageCapture.takePicture(outputFileOptions, executor, new ImageCapture.OnImageSavedCallback() {
                 @Override
                 public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
                     MediaScannerConnection.scanFile(IdentificadorImagenes.this,
@@ -228,9 +228,10 @@ public class IdentificadorImagenes extends AppCompatActivity {
                                                     Task<Text> result =
                                                             recognizer.process(image)
                                                                     .addOnSuccessListener(visionText -> {
-                                                                        if(visionText.getText().equals("")){
-                                                                            TTS.speak(getString(R.string.str_encontre)+ buffer.toString());
-                                                                        }else TTS.speak(getString(R.string.str_encontre)+ ", " + buffer.toString() + ", "+  getString(R.string.str_textofound) + ", " + visionText.getText());
+                                                                        if (visionText.getText().equals("")) {
+                                                                            TTS.speak(getString(R.string.str_encontre) + buffer.toString());
+                                                                        } else
+                                                                            TTS.speak(getString(R.string.str_encontre) + ", " + buffer.toString() + ", " + getString(R.string.str_textofound) + ", " + visionText.getText());
                                                                     })
                                                                     .addOnFailureListener(
                                                                             e -> {
@@ -263,7 +264,7 @@ public class IdentificadorImagenes extends AppCompatActivity {
                                                 Task<Text> result =
                                                         recognizer.process(image)
                                                                 .addOnSuccessListener(visionText -> {
-                                                                    traducir(buffer.toString(),visionText.getText());
+                                                                    traducir(buffer.toString(), visionText.getText());
                                                                 })
                                                                 .addOnFailureListener(
                                                                         e -> {
@@ -271,9 +272,9 @@ public class IdentificadorImagenes extends AppCompatActivity {
                                                                             // ...
                                                                         });
                                             }).addOnFailureListener(e -> {
-                                                        waitingDialog.dismiss();
-                                                        e.printStackTrace();
-                                                    });
+                                                waitingDialog.dismiss();
+                                                e.printStackTrace();
+                                            });
 
                                         }
                                     });
@@ -287,7 +288,7 @@ public class IdentificadorImagenes extends AppCompatActivity {
                 @Override
                 public void onError(@NonNull ImageCaptureException error) {
                     error.printStackTrace();
-                    Log.e("error",error.getMessage());
+                    Log.e("error", error.getMessage());
                     waitingDialog.dismiss();
                 }
             });
@@ -297,10 +298,12 @@ public class IdentificadorImagenes extends AppCompatActivity {
     public String getBatchDirectoryName() {
 
         String app_folder_path = "";
-        app_folder_path = Environment.getExternalStorageDirectory().toString() + "/"+getString(R.string.app_name);
-
+        app_folder_path = Environment.getExternalStorageDirectory().toString() + "/" + getString(R.string.app_name);
         return app_folder_path;
     }
+
+
+
 
     private boolean allPermissionsGranted(){
 

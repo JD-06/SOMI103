@@ -14,6 +14,8 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +35,8 @@ import com.google.mlkit.common.model.DownloadConditions;
 import com.google.mlkit.common.model.RemoteModelManager;
 import com.google.mlkit.nl.translate.TranslateLanguage;
 import com.google.mlkit.nl.translate.TranslateRemoteModel;
+
+import java.io.File;
 
 import static android.Manifest.permission.RECORD_AUDIO;
 
@@ -107,6 +111,7 @@ public class intro1 extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     dialog.dismiss();
+                    crearDirectorioPublico( getString(R.string.app_name));
                     RemoteModelManager modelManager = RemoteModelManager.getInstance();
                     TranslateRemoteModel Model;
                     switch (getString(R.string.str_karen)){
@@ -137,6 +142,14 @@ public class intro1 extends AppCompatActivity {
                 }
             }
         });
+    }
+    public void crearDirectorioPublico(String nombreDirectorio) {
+        //Crear directorio público en la carpeta Pictures.
+
+        File f = new File(Environment.getExternalStorageDirectory(), nombreDirectorio);
+        if (!f.exists()) {
+            f.mkdirs();
+        }
     }
 
 }

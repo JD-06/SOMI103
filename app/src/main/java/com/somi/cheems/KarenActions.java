@@ -78,25 +78,22 @@ public class KarenActions {
 
     private void getdata(String word) {
 
-        Response.ErrorListener response_error_listener = new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                if (error instanceof TimeoutError || error instanceof NoConnectionError) {
-                    //TODO
-                } else if (error instanceof AuthFailureError) {
-                    //TODO
-                } else if (error instanceof ServerError) {
-                    //TODO
-                } else if (error instanceof NetworkError) {
-                    //TODO
-                } else if (error instanceof ParseError) {
-                    //TODO
-                }
+        Response.ErrorListener response_error_listener = error -> {
+            if (error instanceof TimeoutError || error instanceof NoConnectionError) {
+                //TODO
+            } else if (error instanceof AuthFailureError) {
+                //TODO
+            } else if (error instanceof ServerError) {
+                //TODO
+            } else if (error instanceof NetworkError) {
+                //TODO
+            } else if (error instanceof ParseError) {
+                //TODO
             }
         };
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://api.duckduckgo.com/?q=" + word + "&format=json&pretty=1&no_html=1&skip_disambig=1",
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://api.duckduckgo.com/?q=" + word.replace(" ","+") + "&format=json&pretty=1&no_html=1&skip_disambig=1",
                 new Response.Listener<String>()
                 {
                     @Override

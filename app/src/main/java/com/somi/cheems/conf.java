@@ -13,13 +13,15 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
+import com.google.android.material.switchmaterial.SwitchMaterial;
+
 import static android.content.Context.MODE_PRIVATE;
 
 
 public class conf extends Fragment {
 
-Switch swtmode;
-private String dark="dark";
+    SwitchMaterial swtmode;
+    private String dark="dark";
 
     public conf() {
         // Required empty public constructor

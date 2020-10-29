@@ -47,35 +47,32 @@ private BackgroundService gpsService;
         }
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment selectedFragment = null;
+            item -> {
+                Fragment selectedFragment = null;
 
-                    switch (item.getItemId()) {
-                        case R.id.nav_asis:
-                            selectedFragment = new asis();
-                            TTS.speak(getString(R.string.str_asis));
-                            break;
-                        case R.id.nav_menu:
-                            selectedFragment = new menu();
-                            TTS.speak(getString(R.string.str_menu));
-                            break;
-                        case R.id.nav_guia:
-                            selectedFragment = new guia();
-                            TTS.speak(getString(R.string.str_guia));
-                            break;
-                        case R.id.nav_conf:
-                            selectedFragment = new conf();
-                            TTS.speak(getString(R.string.str_conf));
-                            break;
-                    }
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
-
-                    return true;
+                switch (item.getItemId()) {
+                    case R.id.nav_asis:
+                        selectedFragment = new asis();
+                        TTS.speak(getString(R.string.str_asis));
+                        break;
+                    case R.id.nav_menu:
+                        selectedFragment = new menu();
+                        TTS.speak(getString(R.string.str_menu));
+                        break;
+                    case R.id.nav_guia:
+                        selectedFragment = new guia();
+                        TTS.speak(getString(R.string.str_guia));
+                        break;
+                    case R.id.nav_conf:
+                        selectedFragment = new conf();
+                        TTS.speak(getString(R.string.str_conf));
+                        break;
                 }
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        selectedFragment).commit();
+
+                return true;
             };
 
 
