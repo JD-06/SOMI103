@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Splash extends AppCompatActivity {
 
     // Duración en milisegundos que se mostrará el splash
-    private final int DURACION_SPLASH = 1500;
+    private final int DURACION_SPLASH = 1000;
     private String key = "dark";
 
     @Override
