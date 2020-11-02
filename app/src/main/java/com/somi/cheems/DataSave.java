@@ -20,4 +20,16 @@ public class DataSave {
         Boolean isIntroActivityOpnendBefore = pref.getBoolean(nm,false);
         return  isIntroActivityOpnendBefore;
     }
+    public void savePrefsDatastr(String tf, String nm, Context context) {
+        SharedPreferences pref = context.getSharedPreferences(nm,MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString(nm,tf);
+        editor.commit();
+    }
+    //Metodo para recuperar los datos
+    public static String restorePrefDatastr(String nm, Context context) {
+        SharedPreferences pref = context.getSharedPreferences(nm,MODE_PRIVATE);
+        String isIntroActivityOpnendBefore = pref.getString(nm,"");
+        return  isIntroActivityOpnendBefore;
+    }
 }

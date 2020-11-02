@@ -12,6 +12,8 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
@@ -43,10 +45,15 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import static androidx.camera.core.CameraX.getContext;
+
 public class KarenActions {
 
     private RequestQueue mRequestQueue;
     private Context context;
+    private BluetoothThread btt;
+    private Handler writeHandler;
+    final DataSave dataSave = new DataSave();
 
     public void setContext(Context context) {
         this.context = context;
@@ -191,5 +198,57 @@ public class KarenActions {
         int hora = calendario.get(Calendar.HOUR_OF_DAY);
         int min = calendario.get(Calendar.MINUTE);
         return context.getString(R.string.str_hora)+ hora+":"+min;
+    }
+
+    public void connectButtonPressed() {
+        Log.v("TAG", "Connect button pressed.");
+
+        // Only one thread at a time
+        if (btt != null) {
+            Log.w("TAG", "Already connected!");
+            return;
+        }
+
+        // Initialize the Bluetooth thread, passing in a MAC address
+        // and a Handler that will receive incoming messages
+        btt = new BluetoothThread(dataSave.restorePrefDatastr("keyblue",context), new Handler() {
+            @Override
+            public void handleMessage(Message message) {
+                String s = (String) message.obj;
+                // Do something with the message
+                if (s.equals("CONNECTED")) {
+                } else if (s.equals("DISCONNECTED")) {
+                } else if (s.equals("CONNECTION FAILED")) {
+                    btt = null;
+                } else {
+                }
+            }
+        });
+
+        // Get the handler that is used to send messages
+        writeHandler = btt.getWriteHandler();
+
+        // Run the thread
+        btt.start();
+
+    }
+
+    /**
+     * Kill the Bluetooth thread.
+     */
+    public void disconnectButtonPressed() {
+        Log.v("TAG", "Disconnect button pressed.");
+
+        if(btt != null) {
+            btt.interrupt();
+            btt = null;
+        }
+    }
+
+    public void writeButtonPressed(String data) {
+
+        Message msg = Message.obtain();
+        msg.obj = data;
+        writeHandler.sendMessage(msg);
     }
 }

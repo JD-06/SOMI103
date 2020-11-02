@@ -61,5 +61,6 @@
     <string name="facebook_app_id" translatable="false">1249156635476341</string>
     <string name="fb_login_protocol_scheme" translatable="false">fb1249156635476341</string>
     <string name="user_exists" translatable="false">An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.</string>
+    <string name="str_bluesuccessfull">was added successfully</string>
 
 </resources>

@@ -162,6 +162,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/btnNoty"
             android:layout_margin="8dp"
             android:layout_gravity="center"
             android:foreground="?android:attr/selectableItemBackground"
@@ -202,6 +203,7 @@
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/btnMem"
             android:layout_margin="8dp"
             android:layout_gravity="center"
             android:foreground="?android:attr/selectableItemBackground"

@@ -49,4 +49,5 @@
     <string name="str_dialogprocess">Procesando</string>
     <string name="str_encontre">Encontré esto</string>
     <string name="str_textofound">Junto con el siguiente texto</string>
+    <string name="str_bluesuccessfull">se agregó correctamente</string>
 </resources>

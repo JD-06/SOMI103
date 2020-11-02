@@ -43,6 +43,9 @@ public class menu extends Fragment {
         CardView btnUbicacion = view.findViewById(R.id.btnUbicacion);
         CardView btnHora = view.findViewById(R.id.btnHora);
         CardView btnIdentificador = view.findViewById(R.id.btnIdentificador);
+        CardView btnSysP = view.findViewById(R.id.btnSysP);
+        CardView btnMem = view.findViewById(R.id.btnMem);
+        CardView btnNoty = view.findViewById(R.id.btnNoty);
         karenActions  = new KarenActions();
         karenActions.setContext(getContext());
 
@@ -64,6 +67,24 @@ public class menu extends Fragment {
             @Override
             public void onClick(View v) {
                 karenActions.intentGlobal(getContext(),IdentificadorImagenes.class);
+            }
+        });
+        btnSysP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                karenActions.intentGlobal(getContext(),SimpleScannerActivity.class);
+            }
+        });
+        btnNoty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                karenActions.connectButtonPressed();
+            }
+        });
+        btnMem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                karenActions.writeButtonPressed("1");
             }
         });
         return view;
